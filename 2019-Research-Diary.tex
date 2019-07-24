@@ -1,0 +1,489 @@
+%
+% Research Diary for Arne Kobald (EKUT), 2019
+%
+\documentclass[letterpaper,11pt]{article}
+\newcommand{\userName}{Arne Kobald}
+\newcommand{\institution}{EKUT}
+\usepackage{research_diary}
+ 
+\title{Research Diary - 2019}
+\author{Arne Kobald}
+ 
+\chead{\textsc{Research Diary}}
+\lhead{\textsc{\userName}}
+\rfoot{\textsc{\thepage}}
+\cfoot{\textit{Last modified: \today}}
+\lfoot{\textsc{\institution}}
+\graphicspath{{2019/}{~/research/diary/2019/}{~/research/diary/2019/images/}}
+ 
+ 
+\begin{document}
+\begin{center} \begin{LARGE}
+\textbf{Research Diary} \\[3mm]
+\textbf{2019} \\[2cm]
+\end{LARGE} \begin{large}
+Arne Kobald \end{large} \\
+EKUT \\[7in]
+\textsc{Compiled \today}
+\end{center}
+\thispagestyle{empty}
+\newpage
+
+%%% --- 2019/2019-07-24.tex --- %%%
+
+\rhead{2019 $|$ July $|$ 24}
+
+\logoPNG
+
+{\Huge July 24}
+
+\section*{IT}
+\begin{itemize}
+	\item[certbot] auf eos: \mint{bash}|/usr/bin/certbot renew|
+	\begin{verbatim}
+	    Error output from manual-auth-hook command dns_worker_ipc:
+    To fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc.git                                                                                                                                                             
+       fa5bf4be..b6d78755  master -> master                                                                                                                                                                            
+    From fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc                                                                                                                                                               
+       fa5bf4b..b6d7875  master     -> origin/master                                                                                                                                                                   
+    /bin/ls: cannot access '/usr/local/ipc/named/backup/h190724-083405.sql': No such file or directory                                                                                                                 
+    Everything up-to-date                                                                                                                                                                                              
+    fatal: Unable to create '/usr/local/ipc/.git/refs/remotes/origin/master.lock': File exists.                                                                                                                        
+
+    If no other git process is currently running, this probably means a                                                                                                                                                
+    git process crashed in this repository earlier. Make sure no other git                                                                                                                                             
+    process is running and remove the file manually to continue.                                                                                                                                                       
+    /bin/ls: cannot access /usr/local/ipc/named/backup/h190724-083416.sql: No such file or directory                                                                                                                   
+    /bin/cp: cannot stat `/var/lib/named/etc/named.conf': No such file or directory                                                                                                                                    
+    Everything up-to-date
+	\end{verbatim}
+	\item[ToDo] 
+	\begin{itemize}
+		\item \verb|dns_worker_ipc_cleanup| typo in \verb|renew_ipc|
+		\item \verb|dns_worker_ipc_cleanup|:
+		\mint{bash}{sed -i "/_acme-challenge/ s/\".*\"/\"\"/" ../named/ip.dat} and \mint{bash}{cd /usr/local/ipc/certbot}
+	\end{itemize}
+
+\end{itemize}
+
+
+\section*{DFT}
+
+\subsection*{\ce{WO3}}
+\begin{itemize}
+\item[PW.out]
+\begin{verbatim}
+     Writing output data file INTER.save
+     NEW-OLD atomic charge density approx. for the potential
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine scale_h (1):
+     Not enough space allocated for radial FFT: try restarting with a larger cell_factor.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+\end{verbatim}
+\item \verb|cell_factor| was $3.0$, try restart with k-points \verb|4 4 4| instead of \verb|2 2 2|
+
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
+\end{document}
+%
+% Research Diary for Arne Kobald (EKUT), 2019
+%
+\documentclass[letterpaper,11pt]{article}
+\newcommand{\userName}{Arne Kobald}
+\newcommand{\institution}{EKUT}
+\usepackage{research_diary}
+ 
+\title{Research Diary - 2019}
+\author{Arne Kobald}
+ 
+\chead{\textsc{Research Diary}}
+\lhead{\textsc{\userName}}
+\rfoot{\textsc{\thepage}}
+\cfoot{\textit{Last modified: \today}}
+\lfoot{\textsc{\institution}}
+\graphicspath{{2019/}{~/research/diary/2019/}{~/research/diary/2019/images/}}
+ 
+ 
+\begin{document}
+\begin{center} \begin{LARGE}
+\textbf{Research Diary} \\[3mm]
+\textbf{2019} \\[2cm]
+\end{LARGE} \begin{large}
+Arne Kobald \end{large} \\
+EKUT \\[7in]
+\textsc{Compiled \today}
+\end{center}
+\thispagestyle{empty}
+\newpage
+
+%%% --- 2019/2019-07-24.tex --- %%%
+
+\rhead{2019 $|$ July $|$ 24}
+
+\logoPNG
+
+{\Huge July 24}
+
+\section*{IT}
+\begin{itemize}
+	\item[certbot] auf eos: \mint{bash}|/usr/bin/certbot renew|
+	\begin{verbatim}
+	    Error output from manual-auth-hook command dns_worker_ipc:
+    To fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc.git                                                                                                                                                             
+       fa5bf4be..b6d78755  master -> master                                                                                                                                                                            
+    From fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc                                                                                                                                                               
+       fa5bf4b..b6d7875  master     -> origin/master                                                                                                                                                                   
+    /bin/ls: cannot access '/usr/local/ipc/named/backup/h190724-083405.sql': No such file or directory                                                                                                                 
+    Everything up-to-date                                                                                                                                                                                              
+    fatal: Unable to create '/usr/local/ipc/.git/refs/remotes/origin/master.lock': File exists.                                                                                                                        
+
+    If no other git process is currently running, this probably means a                                                                                                                                                
+    git process crashed in this repository earlier. Make sure no other git                                                                                                                                             
+    process is running and remove the file manually to continue.                                                                                                                                                       
+    /bin/ls: cannot access /usr/local/ipc/named/backup/h190724-083416.sql: No such file or directory                                                                                                                   
+    /bin/cp: cannot stat `/var/lib/named/etc/named.conf': No such file or directory                                                                                                                                    
+    Everything up-to-date
+	\end{verbatim}
+	\item[ToDo] 
+	\begin{itemize}
+		\item \verb|dns_worker_ipc_cleanup| typo in \verb|renew_ipc|
+		\item \verb|dns_worker_ipc_cleanup|:
+		\mint{bash}{sed -i "/_acme-challenge/ s/\".*\"/\"\"/" ../named/ip.dat} and \mint{bash}{cd /usr/local/ipc/certbot}
+	\end{itemize}
+
+\end{itemize}
+
+
+\section*{DFT}
+
+\subsection*{\ce{WO3}}
+\begin{itemize}
+\item[PW.out]
+\begin{verbatim}
+     Writing output data file INTER.save
+     NEW-OLD atomic charge density approx. for the potential
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine scale_h (1):
+     Not enough space allocated for radial FFT: try restarting with a larger cell_factor.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+\end{verbatim}
+\item \verb|cell_factor| was $3.0$, try restart with k-points \verb|4 4 4| instead of \verb|2 2 2|
+
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
+
+%%% --- 2019/2019-07-24.tex --- %%%
+
+\rhead{2019 $|$ July $|$ 24}
+
+\logoPNG
+
+{\Huge July 24}
+
+\section*{IT}
+\begin{itemize}
+	\item[certbot] auf eos: \mint{bash}|/usr/bin/certbot renew|
+	\begin{verbatim}
+	    Error output from manual-auth-hook command dns_worker_ipc:
+    To fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc.git                                                                                                                                                             
+       fa5bf4be..b6d78755  master -> master                                                                                                                                                                            
+    From fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc                                                                                                                                                               
+       fa5bf4b..b6d7875  master     -> origin/master                                                                                                                                                                   
+    /bin/ls: cannot access '/usr/local/ipc/named/backup/h190724-083405.sql': No such file or directory                                                                                                                 
+    Everything up-to-date                                                                                                                                                                                              
+    fatal: Unable to create '/usr/local/ipc/.git/refs/remotes/origin/master.lock': File exists.                                                                                                                        
+
+    If no other git process is currently running, this probably means a                                                                                                                                                
+    git process crashed in this repository earlier. Make sure no other git                                                                                                                                             
+    process is running and remove the file manually to continue.                                                                                                                                                       
+    /bin/ls: cannot access /usr/local/ipc/named/backup/h190724-083416.sql: No such file or directory                                                                                                                   
+    /bin/cp: cannot stat `/var/lib/named/etc/named.conf': No such file or directory                                                                                                                                    
+    Everything up-to-date
+	\end{verbatim}
+	\item[ToDo] 
+	\begin{itemize}
+		\item \verb|dns_worker_ipc_cleanup| typo in \verb|renew_ipc|
+		\item \verb|dns_worker_ipc_cleanup|:
+		\mint{bash}{sed -i "/_acme-challenge/ s/\".*\"/\"\"/" ../named/ip.dat} and \mint{bash}{cd /usr/local/ipc/certbot}
+	\end{itemize}
+
+\end{itemize}
+
+
+\section*{DFT}
+
+\subsection*{\ce{WO3}}
+\begin{itemize}
+\item[PW.out]
+\begin{verbatim}
+     Writing output data file INTER.save
+     NEW-OLD atomic charge density approx. for the potential
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine scale_h (1):
+     Not enough space allocated for radial FFT: try restarting with a larger cell_factor.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+\end{verbatim}
+\item \verb|cell_factor| was $3.0$, try restart with k-points \verb|4 4 4| instead of \verb|2 2 2|
+
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
+\end{document}
+%
+% Research Diary for Arne Kobald (EKUT), 2019
+%
+\documentclass[letterpaper,11pt]{article}
+\newcommand{\userName}{Arne Kobald}
+\newcommand{\institution}{EKUT}
+\usepackage{research_diary}
+ 
+\title{Research Diary - 2019}
+\author{Arne Kobald}
+ 
+\chead{\textsc{Research Diary}}
+\lhead{\textsc{\userName}}
+\rfoot{\textsc{\thepage}}
+\cfoot{\textit{Last modified: \today}}
+\lfoot{\textsc{\institution}}
+\graphicspath{{2019/}{~/research/diary/2019/}{~/research/diary/2019/images/}}
+ 
+ 
+\begin{document}
+\begin{center} \begin{LARGE}
+\textbf{Research Diary} \\[3mm]
+\textbf{2019} \\[2cm]
+\end{LARGE} \begin{large}
+Arne Kobald \end{large} \\
+EKUT \\[7in]
+\textsc{Compiled \today}
+\end{center}
+\thispagestyle{empty}
+\newpage
+
+%%% --- 2019/2019-07-24.tex --- %%%
+
+\rhead{2019 $|$ July $|$ 24}
+
+\logoPNG
+
+{\Huge July 24}
+
+\section*{IT}
+\begin{itemize}
+	\item[certbot] auf eos: \mint{bash}|/usr/bin/certbot renew|
+	\begin{verbatim}
+	    Error output from manual-auth-hook command dns_worker_ipc:
+    To fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc.git                                                                                                                                                             
+       fa5bf4be..b6d78755  master -> master                                                                                                                                                                            
+    From fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc                                                                                                                                                               
+       fa5bf4b..b6d7875  master     -> origin/master                                                                                                                                                                   
+    /bin/ls: cannot access '/usr/local/ipc/named/backup/h190724-083405.sql': No such file or directory                                                                                                                 
+    Everything up-to-date                                                                                                                                                                                              
+    fatal: Unable to create '/usr/local/ipc/.git/refs/remotes/origin/master.lock': File exists.                                                                                                                        
+
+    If no other git process is currently running, this probably means a                                                                                                                                                
+    git process crashed in this repository earlier. Make sure no other git                                                                                                                                             
+    process is running and remove the file manually to continue.                                                                                                                                                       
+    /bin/ls: cannot access /usr/local/ipc/named/backup/h190724-083416.sql: No such file or directory                                                                                                                   
+    /bin/cp: cannot stat `/var/lib/named/etc/named.conf': No such file or directory                                                                                                                                    
+    Everything up-to-date
+	\end{verbatim}
+	\item[ToDo] 
+	\begin{itemize}
+		\item \verb|dns_worker_ipc_cleanup| typo in \verb|renew_ipc|
+		\item \verb|dns_worker_ipc_cleanup|:
+		\mint{bash}{sed -i "/_acme-challenge/ s/\".*\"/\"\"/" ../named/ip.dat} and \mint{bash}{cd /usr/local/ipc/certbot}
+	\end{itemize}
+
+\end{itemize}
+
+
+\section*{DFT}
+
+\subsection*{\ce{WO3}}
+\begin{itemize}
+\item[PW.out]
+\begin{verbatim}
+     Writing output data file INTER.save
+     NEW-OLD atomic charge density approx. for the potential
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine scale_h (1):
+     Not enough space allocated for radial FFT: try restarting with a larger cell_factor.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+\end{verbatim}
+\item \verb|cell_factor| was $3.0$, try restart with k-points \verb|4 4 4| instead of \verb|2 2 2|
+
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
+
+%%% --- 2019/2019-07-24.tex --- %%%
+
+\rhead{2019 $|$ July $|$ 24}
+
+\logoPNG
+
+{\Huge July 24}
+
+\section*{IT}
+\begin{itemize}
+	\item[certbot] auf eos: \mint{bash}|/usr/bin/certbot renew|
+	\begin{verbatim}
+	    Error output from manual-auth-hook command dns_worker_ipc:
+    To fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc.git                                                                                                                                                             
+       fa5bf4be..b6d78755  master -> master                                                                                                                                                                            
+    From fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc                                                                                                                                                               
+       fa5bf4b..b6d7875  master     -> origin/master                                                                                                                                                                   
+    /bin/ls: cannot access '/usr/local/ipc/named/backup/h190724-083405.sql': No such file or directory                                                                                                                 
+    Everything up-to-date                                                                                                                                                                                              
+    fatal: Unable to create '/usr/local/ipc/.git/refs/remotes/origin/master.lock': File exists.                                                                                                                        
+
+    If no other git process is currently running, this probably means a                                                                                                                                                
+    git process crashed in this repository earlier. Make sure no other git                                                                                                                                             
+    process is running and remove the file manually to continue.                                                                                                                                                       
+    /bin/ls: cannot access /usr/local/ipc/named/backup/h190724-083416.sql: No such file or directory                                                                                                                   
+    /bin/cp: cannot stat `/var/lib/named/etc/named.conf': No such file or directory                                                                                                                                    
+    Everything up-to-date
+	\end{verbatim}
+	\item[ToDo] 
+	\begin{itemize}
+		\item \verb|dns_worker_ipc_cleanup| typo in \verb|renew_ipc|
+		\item \verb|dns_worker_ipc_cleanup|:
+		\mint{bash}{sed -i "/_acme-challenge/ s/\".*\"/\"\"/" ../named/ip.dat} and \mint{bash}{cd /usr/local/ipc/certbot}
+	\end{itemize}
+
+\end{itemize}
+
+
+\section*{DFT}
+
+\subsection*{\ce{WO3}}
+\begin{itemize}
+\item[PW.out]
+\begin{verbatim}
+     Writing output data file INTER.save
+     NEW-OLD atomic charge density approx. for the potential
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine scale_h (1):
+     Not enough space allocated for radial FFT: try restarting with a larger cell_factor.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+\end{verbatim}
+\item \verb|cell_factor| was $3.0$, try restart with k-points \verb|4 4 4| instead of \verb|2 2 2|
+
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
+
+%%% --- 2019/2019-07-24.tex --- %%%
+
+\rhead{2019 $|$ July $|$ 24}
+
+\logoPNG
+
+{\Huge July 24}
+
+\section*{IT}
+\begin{itemize}
+	\item[certbot] auf eos: \mint{bash}|/usr/bin/certbot renew|
+	\begin{verbatim}
+	    Error output from manual-auth-hook command dns_worker_ipc:
+    To fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc.git                                                                                                                                                             
+       fa5bf4be..b6d78755  master -> master                                                                                                                                                                            
+    From fritz.ipc.uni-tuebingen.de:admins/usr-local-ipc                                                                                                                                                               
+       fa5bf4b..b6d7875  master     -> origin/master                                                                                                                                                                   
+    /bin/ls: cannot access '/usr/local/ipc/named/backup/h190724-083405.sql': No such file or directory                                                                                                                 
+    Everything up-to-date                                                                                                                                                                                              
+    fatal: Unable to create '/usr/local/ipc/.git/refs/remotes/origin/master.lock': File exists.                                                                                                                        
+
+    If no other git process is currently running, this probably means a                                                                                                                                                
+    git process crashed in this repository earlier. Make sure no other git                                                                                                                                             
+    process is running and remove the file manually to continue.                                                                                                                                                       
+    /bin/ls: cannot access /usr/local/ipc/named/backup/h190724-083416.sql: No such file or directory                                                                                                                   
+    /bin/cp: cannot stat `/var/lib/named/etc/named.conf': No such file or directory                                                                                                                                    
+    Everything up-to-date
+	\end{verbatim}
+	\item[ToDo] 
+	\begin{itemize}
+		\item \verb|dns_worker_ipc_cleanup| typo in \verb|renew_ipc|
+		\item \verb|dns_worker_ipc_cleanup|:
+		\mint{bash}{sed -i "/_acme-challenge/ s/\".*\"/\"\"/" ../named/ip.dat} and \mint{bash}{cd /usr/local/ipc/certbot}
+	\end{itemize}
+
+\end{itemize}
+
+
+\section*{DFT}
+
+\subsection*{\ce{WO3}}
+\begin{itemize}
+\item[PW.out]
+\begin{verbatim}
+     Writing output data file INTER.save
+     NEW-OLD atomic charge density approx. for the potential
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+     Error in routine scale_h (1):
+     Not enough space allocated for radial FFT: try restarting with a larger cell_factor.
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+     stopping ...
+\end{verbatim}
+\item \verb|cell_factor| was $3.0$, try restart with k-points \verb|4 4 4| instead of \verb|2 2 2|
+
+\end{itemize}
+
+
+
+
+
+
+
+\newpage
+\end{document}

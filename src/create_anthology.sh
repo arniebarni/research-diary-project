@@ -16,9 +16,11 @@ echo "User: $Author ($Institution)"
 echo "Year: $Year"
 
 path=`pwd`
-if [ "`basename $path`" == 'scripts' ]; then
+if [ "`basename $path`" == 'src' ]; then
     cd ..
 fi
+
+cp src/research_diary.sty .
 
 if [ -d $Year ]; then
     echo "Directory for year $Year found. Continuing..."
@@ -34,7 +36,7 @@ echo "%" >> $FileName
 echo "\documentclass[letterpaper,11pt]{article}" >> $FileName
 echo "\newcommand{\userName}{$Author}" >> $FileName
 echo "\newcommand{\institution}{$Institution}" >> $FileName
-echo "\usepackage{researchdiary}" >> $FileName
+echo "\usepackage{research_diary}" >> $FileName
 echo " " >> $FileName
 echo "\title{Research Diary - $Year}" >> $FileName
 echo "\author{$Author}" >> $FileName
@@ -62,6 +64,7 @@ echo "\thispagestyle{empty}" >> $FileName
 echo "\newpage" >> $FileName
 
 for i in $( ls $Year/$Year-*.tex ); do
+    echo "Adding $i"
     echo -e "\n%%% --- $i --- %%%\n" >> $tmpName
     echo "\rhead{`grep workingDate $i | cut -d { -f 4 | cut -d } -f 1`}" >> $tmpName
     sed -n '/\\begin{document}/,/\\end{document}/p' $i >> $tmpName
@@ -78,16 +81,6 @@ cat $tmpName >> $FileName
 
 echo "\end{document}" >> $FileName
 
-if [ "$Year" == '2011' ]; then
-    sed -i '/\\begin{extract}/,/\\end{extract}/d' 2011-Research-Diary.tex
-    sed -i 's/\\begin{extract\*}//g' 2011-Research-Diary.tex
-    sed -i 's/\\end{extract\*}//g' 2011-Research-Diary.tex
-fi
-
-if [ "$Year" == '2010' ]; then
-    sed -i 's/mcmaster_logo.png/mcmaster_logo.eps/g' 2010-Research-Diary.tex
-fi
-
-if [ "`basename $path`" == 'scripts' ]; then
-    cd scripts
+if [ "`basename $path`" == 'src' ]; then
+    cd src
 fi

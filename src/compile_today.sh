@@ -11,7 +11,7 @@ PDFFILE=$year-$month-$day.pdf
 
 echo "Compiling $TEXFILE."
 
-latex -interaction=batchmode -halt-on-error $TEXFILE 
+pdflatex -synctex=1 -interaction=nonstopmode -shell-escape $TEXFILE 
 dvips -q -o "$PSFILE" "$DVIFILE" -R0
 ps2pdf "$PSFILE" "$PDFFILE"
 

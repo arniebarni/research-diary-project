@@ -32,17 +32,17 @@ fi
 
 cp ../src/entry.tex $filename
 
-platform=`uname`
-if [[ "$platform" == 'Darwin' ]]; then
-    sed -i "" "s/@year/$year/g" $filename
-    sed -i "" "s/@MONTH/`date +%B`/g" $filename
-    sed -i "" "s/@dday/$day/g" $filename
-    sed -i "" "s/@day/`date +%e`/g" $filename
-else
+#platform=`uname`
+#if [[ "$platform" == 'Darwin' ]]; then
+#    sed -i "" "s/@year/$year/g" $filename
+#    sed -i "" "s/@MONTH/`date +%B`/g" $filename
+#    sed -i "" "s/@dday/$day/g" $filename
+#    sed -i "" "s/@day/`date +%e`/g" $filename
+#else
     sed -i "s/@year/$year/g" $filename
     sed -i "s/@MONTH/`date +%B`/g" $filename
     sed -i "s/@dday/$day/g" $filename
     sed -i "s/@day/`date +%e`/g" $filename
-fi
+#fi
 
 echo "Finished adding $filename to $year."

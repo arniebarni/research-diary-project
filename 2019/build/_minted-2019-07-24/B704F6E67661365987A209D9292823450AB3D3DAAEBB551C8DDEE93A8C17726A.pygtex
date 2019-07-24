@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+sed \PYGZhy{}i \PYG{l+s+s2}{\PYGZdq{}/\PYGZus{}acme\PYGZhy{}challenge/ s/\PYGZbs{}\PYGZdq{}.*\PYGZbs{}\PYGZdq{}/\PYGZbs{}\PYGZdq{}\PYGZbs{}\PYGZdq{}/\PYGZdq{}} ../named/ip.dat
+\end{Verbatim}
